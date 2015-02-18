@@ -1,5 +1,5 @@
 class DevelopersController < ApplicationController
-  before_action :set_developer, only: [:signup,:show, :edit, :update, :destroy]
+  before_action :set_developer, only: [:signup,:show, :edit, :update, :destroy, :passwordchange]
 
   # GET /developers
   # GET /developers.json
@@ -56,6 +56,9 @@ class DevelopersController < ApplicationController
     @stories = Story.all.select{|s| s.Project_id == @developer.Project_id}
   end
 
+  def passwordchange
+
+  end
   # PATCH/PUT /developers/1
   # PATCH/PUT /developers/1.json
   def update
