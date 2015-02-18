@@ -22,12 +22,13 @@ Rails.application.routes.draw do
   get 'developers/:id/createstory' => 'developers#createstory', as: :createstory
   get 'developers/:id/signup' => 'developers#signup', as: :signup
   get 'developers/:id/show' => 'developer#show', as: :show
+  get 'developers/:id/passwordchange' => 'developers#passwordchange', as: :passwordchange
   # You can have the root of your site routed with "root"
 
 
   get   'login' => 'sessions#new'
   post   'login' =>'sessions#create'
-  delete  'logout' =>'sessions#destroy'
+  get  'logout' =>'sessions#logout'
   # root 'sessions#new'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
